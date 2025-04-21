@@ -5,7 +5,7 @@ const Books = ({ dataPromise }) => {
     return (
         <div className='my-5'>
             <h1 className='font-semibold text-3xl text-center'>Books</h1>
-            <div className='grid grid-cols-3 my-7 gap-7'>
+            <div className='grid grid-cols-3 my-11 gap-5'>
                 <Suspense fallback={<span className="loading loading-bars loading-xl"></span>}>
                     {
                         dataPromise.map((singleBook) => <Book key={singleBook.bookId} singleBook={singleBook}></Book>)
